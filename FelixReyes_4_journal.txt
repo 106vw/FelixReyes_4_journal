@@ -1,0 +1,1 @@
+what is an IDE? an ide is a code editor and its function is to provide comprehensive facilities.
