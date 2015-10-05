@@ -1,0 +1,65 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package felixreyes_4_datatypes;
+
+/**
+ *
+ * @author cmarquez7180
+ */
+public class FelixReyes_4_datatypes {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        int i = 51;
+        float a = 7.1f;
+        double b = 11.0;
+        short c = 100;
+        char d1 = '1';
+        char d2 = 'd';
+        char d3 = 122;
+        String e = "why certainly";
+        String el = "Felix is the best";
+        boolean f = false;
+        boolean g = i % 2 == 0;
+        /* 
+         here we will look at same mathematical
+         operators 
+         */
+
+        System.out.println(i + " an integer");
+        System.out.println(a + " a float");
+        System.out.println(b + " a double");
+        System.out.println(c + " a short");
+        System.out.println(d1 + " a char");
+        System.out.println(d2 + " a char");
+        System.out.println(d3 + " a char");
+        System.out.println(e + " a string");
+        System.out.println(f + " a boolean");
+//        for(i=0; i<200; i++) {
+//            System.out.println(i + d3);
+//                for(i = -123; i < 123; i++);
+//syste.out println ((char)) i);
+//    System.out.println(i % 4 ==0);
+//        i= 22;
+//        a = 0;
+//        e = "ninja";
+//            System.out.println(e + i + " an /" + "a string plus an integer"
+//            );
+        for (i = 0; i < 500; i++) {
+            
+        }
+            /* if is a conditional (flow) statement. 
+             If a condition is true that the follwing will be executed 
+             */
+
+            if (i % 2 == 0); 
+    }
+    
+}
+
