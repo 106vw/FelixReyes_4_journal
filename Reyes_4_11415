@@ -1,0 +1,10 @@
+What is a method?
+a method is a new way to start a new pair of codes its like a group 
+What mehtods did you use in your game?
+I used static voids for my methods
+What is awhile loop ?
+a while loop is what allows the player or consumer to constantly go back in the game or repeat the game if he has failed what he was told to do by the game 
+how did i use a while loop, boolean, and counter in my guessing game ?
+i used a while in my game in order for the player to restart from the beggining to play again like a game over.
+i also used a boolean to print out a certain type of words, and counter to show the player he was wrong and send him back to try agin.
+
