@@ -1,0 +1,8 @@
+digraph simple_map {
+A [label="Wake up in a dark room "]	// node B
+B [label="Find out your family is missing "]	// node C
+C [label="walk up to the one and only door"]
+A -> B [label="once you go black youll never go back", fontcolor=darkgreen]
+B -> C
+
+}
