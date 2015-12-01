@@ -1,0 +1,8 @@
+What is a method?
+A method is used to to create a new group of codes, for example in my game that i created i used a different method for every question.
+Which Methods did you use and how did you use them in your guessing game program?
+In my guessing game i used the method called wronganswer and in this method the code prints out "you have chosen the worng number and have died".
+What is a while loop?
+a while loop is is never ending cycle for example: i ask you what is my age? and you say the wrong number i will keep sending you back again.'
+How did use a while loop, boolean, and counter in my guessing game?
+i used a while loop in the way i set up the last example given to you above, and i used a boolean to print out a ceratin word in a certain way. 
