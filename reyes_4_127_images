@@ -1,0 +1,3 @@
+in order to add an image to a slick game you will need an image(obvi) but the 
+code would be "startimage = new Image("/home/freyes/Desktop/jb.jpg");"
+the code above is creating a new image byt getting it from my destop folder.
