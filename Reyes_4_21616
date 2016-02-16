@@ -1,0 +1,5 @@
+How was an array used in your Slick Game?
+An array is used for item for example 
+public arraylit stuff = new arraylist();
+
+An array can be used for storage.
