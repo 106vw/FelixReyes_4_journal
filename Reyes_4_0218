@@ -1,0 +1,24 @@
+Why would it be unrealistic / unproductive  to memorize Slick syntax - what are the skills we were trying to practice?
+We wouldnt need it 
+
+What is an array?
+an array is a list ob objects or items
+
+How do you make an array? Give an example. 
+private String[] dessert = new String[3];
+
+What is an ArrayList?
+it is a group of objects or items
+
+How do you make an arraylist?
+new ArrayList Ball = new ball
+
+In Netbeans, make an arraylist. Use autocompletion with the created arraylist (the '.' and pop-up):
+What are three useful arraylist methods that you identified?
+I dont know
+
+What is the difference between an array and an arraylist?
+an array is adding to a list and an array list is the list of objects
+
+How could we make a health counter for an avatar?
+I dont Know
