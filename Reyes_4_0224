@@ -1,0 +1,24 @@
+Define a class Rat
+	A class Rat is a calss named Rat??
+Provide the code to declare and instatiate Rats
+public class Rat{
+	Rat rat = new rat;
+Explain where the decaration and initialization are placed
+	you declare the class Rat at the registry of the relevant class
+	and you initiate at the bottom of the class
+Provide a two-dimensional array that specifies coordinates for five rat?
+
+public class Rat{
+public rat size(12,12);
+	public void(String[]args){
+		Rat ratz = new Rat();
+		ratz.create("Ugly"12,12);
+		ratz.create("fabulous"12,12);
+		ratz.create("sexy"12,12);
+		ratz.create("horrible"12,12);
+		ratz.create("pretty"12,12);
+
+
+
+
+}   
