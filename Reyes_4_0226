@@ -1,0 +1,38 @@
+What does the code below do?
+-The code below will print out the cordinates of a map.
+How could you make it print an X? i.e., what array values would you change?
+-I would change the part of the code  System.out.println("."); to System.out.println("X"). 
+How could you use this to make a 5 in a row game?
+You can use this by printing out a char in very giving cordinate.
+import java.util.Arrays;
+public class SampleArray {
+
+    public static void main(String[] args) {
+
+        char[][] map = new char[9][9];
+        map[0][0] = 'x';
+        map[2][3] = 'x';
+        map[4][4] = 'x';
+        map[7][7] = 'x';
+        map[8][8] = 'x';
+        for (int i = 0; i <= map[0].length - 1; i++) {
+            for (int j = 0; j <= map[1].length - 1; j++) {
+                if (j < map[1].length - 1) {
+                    if (map[i][j] != 'x') {
+                        System.out.print(".");
+                    } else {
+                        System.out.print(map[i][j]);
+                    }
+                } else {
+                    if (map[i][j] != 'x') {
+                        System.out.println(".");
+                    } else {
+                        System.out.println(map[i][j]);
+                    }
+                }
+            }
+        }
+    }
+}
+ 
+
