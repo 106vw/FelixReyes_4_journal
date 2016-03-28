@@ -1,0 +1,10 @@
+the for loops are the same in both coding languages.arduino is very simple and easier to read. C can be used for alot more things there codes are more complex.
+I have not made any but i will try to sometime this week (like today)
+Power is required for a circuit.
+code is compiled by avr-gcc. 
+
+
+One of my favorite projects I accomplished with the arduino program was the blinking LED.
+It was a very simple project, I followed the book instructions and was able to learn.
+The project consists of 3 jumper wires 2 of the wires are for the positive and negative charges.
+The 3rd wire is what brings the power into the bread bored. The 330 resistor allows the power to flow from one side to the other.
