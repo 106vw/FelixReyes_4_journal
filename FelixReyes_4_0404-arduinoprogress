@@ -1,0 +1,4 @@
+I have hooked up LED to my breadboard and have coded them to blink. I need to 
+make the code alowable to let let the LED blink at certain time, one by one.
+I will have blinking LED by friday. I am going to change code by playing around with the 
+delay of the on and off.
