@@ -1,0 +1,42 @@
+Given mymap[67][43] Which is the x coordinate? Which is the y coordinate? Why? How does this happen?
+the x cordinate must be i and Y must j.
+Consider:
+
+        for (int i = 0; i <= map[0].length - 1; i++) {
+            for (int j = 0; j <= map[1].length - 1; j++) {
+                if (j < map[1].length - 1) {
+                  if (i=0){ System.out.print("8888"); #a
+                    } else if (map[i][j] != 'x') {
+                        System.out.print("."); #e
+                    } else {
+                        System.out.print(map[i][j]); #b
+                    }
+                } else {
+                    if (map[i][j] != 'x') {
+                        System.out.println("."); #c
+                    } else {
+                        System.out.println(map[i][j]); #d
+                    }
+                }
+            }
+        }
+    }
+        
+        
+      
+
+Write the code from line #a and explain what it does.
+                  if (i=0){ System.out.print("8888"); #a
+if the x cordinate equals 0 then the screen will print "8888"
+Write the code from line #b and explain what it does.
+		 System.out.print(map[i][j]); #b
+if the nothing equals 0 for the last cordinate then the screen will just print out the map.
+Write the code from line #c and explain what it does. Explain how its different than #e
+if any code is equal to x then the scrren will print out a X on the map.
+Write the code from line #d and explain what it does.
+if th code does not print out any of the given charaters then the map will just print out.
+Explain how to use a boolean with a while loop. Provide a very specific use case and code example.
+you can use a boolean for example with a lose effect at the end.
+Explain the use of static.
+the use of static means it will stay the same and not change.
+Provide an example of how you could use an object with your game. Give a code example
