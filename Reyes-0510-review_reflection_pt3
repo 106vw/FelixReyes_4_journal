@@ -1,0 +1,8 @@
+Create a class for 'hero'
+static void Hero(){
+	}
+The class should contain:
+variables for health, score, power/weapon, dexterity, perception, level, x, y, z, and a symbol
+There should also be a class constructor accepting inputs for name, x, y, and symbol
+Provide an example of initializing a hero object with your name
+Explain why you would not initialize the hero in class hero
