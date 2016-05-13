@@ -2,6 +2,7 @@ package arrays;
 
 import java.util.Scanner;       // these are the imports for example I am trying to get beer and i ask for it but they diont have it they need to impoort it  
 import java.util.Random;
+//import java.util.Music;
 
 public class Arrays {
 
@@ -21,6 +22,7 @@ public class Arrays {
     public static int winX = 1;
     public static int winY = 1;
     public static boolean lose;
+  //  public static Music gigap;
     //startX = randomNumber.nextInt(8)+1;
     //startY = randomNumber.nextInt(8)+1;
     //estartX= randomNumber.nextInt(8)+1;
@@ -93,6 +95,7 @@ public class Arrays {
                     System.out.println("Bye");
                     System.exit(0);
                 }
+        }
                 if (startX == winX && startY == winY) {
                     System.out.println("You have won, would you like to continue to the next level?");
                     Scanner choiceq = new Scanner(System.in);
@@ -106,7 +109,7 @@ public class Arrays {
                     }
 
                 }
-            }
+         //   }
 
             System.out.println("To move the '@' symbol you must type 'N' to go up 'S' to go down 'E' to go right 'W' to go left or 'NE' to up and left, 'NW' to go up and right 'SW' to go down and left, 'SE' to go down and left");
             Scanner compass = new Scanner(System.in);
@@ -123,8 +126,8 @@ public class Arrays {
                 Board();
                 Move();
             } else if (movement.contains("s") && movement.contains("e")) {      // the && is like saying "is the person typing types S and E" but its just in java  
-                startY++;
                 startX++;
+                startY++;
                 Board();
                 Move();
             } else if (movement.contains("s") && movement.contains("w")) {
