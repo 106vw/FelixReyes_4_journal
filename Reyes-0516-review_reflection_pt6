@@ -1,0 +1,16 @@
+
+    Explain casting. Up-casting, Down-casting.
+Casting is changing one data type to another data type. 
+    Give a specific code example for up-casting
+ public static void main (String [] args) 
+    {
+        Dog d = new Dog();      
+        Animal a = (Animal)d;
+        d.callme();
+        a.callme();
+        ((Dog) a).`callme2`();
+    }
+} 
+   Give a specific code example for converting a char to a String
+    What is the range of values for byte? Why?
+

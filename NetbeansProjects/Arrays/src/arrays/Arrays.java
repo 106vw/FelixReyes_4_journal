@@ -84,79 +84,96 @@ public class Arrays {
             choiceOne = choice.nextLine().trim().toLowerCase();
            // lose = true;
             //while (!lose) {       //the exclamation oint says not to keep going  
-                if (choiceOne.contains("y")) {
+            if (choiceOne.contains("y")) {
 
-                    startX = 7;
-                    startY = 7;
-                    Board();
-                }
+                startX = 7;
+                startY = 7;
+                estartX = randomNumber.nextInt(8) + 1;          // the enemy cordinates
+                estartY = randomNumber.nextInt(8) + 1;
+                eOnestartX = randomNumber.nextInt(8) + 1;
+                eOnestartY = randomNumber.nextInt(8) + 1;
+                movingEX = randomNumber.nextInt(8) + 1;
+                movingEY = randomNumber.nextInt(8) + 1;
+                Board();
+            }
 
-                if (choiceOne.contains("n")) {
-                    System.out.println("Bye");
-                    System.exit(0);
-                }
+            if (choiceOne.contains("n")) {
+                System.out.println("Bye");
+                System.exit(0);
+            }
         }
-                if (startX == winX && startY == winY) {
-                    System.out.println("You have won, would you like to continue to the next level?");
-                    Scanner choiceq = new Scanner(System.in);
-                    choiceTwo = choiceq.nextLine().trim().toLowerCase();
-                    if (choiceTwo.contains("y")) {
-                        Board();
-                    }
-                    if (choiceTwo.contains("n")) {
-                        System.out.println("Bye");
-                        System.exit(0);
-                    }
-
-                }
-         //   }
-
-            System.out.println("To move the '@' symbol you must type 'N' to go up 'S' to go down 'E' to go right 'W' to go left or 'NE' to up and left, 'NW' to go up and right 'SW' to go down and left, 'SE' to go down and left");
-            Scanner compass = new Scanner(System.in);
-            movement = compass.nextLine().trim().toLowerCase(); // this mobvement thing is being told that it works for compass
-
-            if (movement.contains("n") && movement.contains("e")) {
-                startX--;
-                startY++;
+        if (startX == winX && startY == winY) {
+            System.out.println("You have won, would you like to continue to the next level?");
+            Scanner choiceq = new Scanner(System.in);
+            choiceTwo = choiceq.nextLine().trim().toLowerCase();
+            if (choiceTwo.contains("y")) {
+                startX = 7;
+                startY = 7;
+                estartX = randomNumber.nextInt(8) + 1;          // the enemy cordinates
+                estartY = randomNumber.nextInt(8) + 1;
+                eOnestartX = randomNumber.nextInt(8) + 1;
+                eOnestartY = randomNumber.nextInt(8) + 1;
+                movingEX = randomNumber.nextInt(8) + 1;
+                movingEY = randomNumber.nextInt(8) + 1;
                 Board();
-                Move();
-            } else if (movement.contains("n") && movement.contains("w")) {      // diagonal movement till line 56 - 75
-                startX--;
-                startY--;
-                Board();
-                Move();
-            } else if (movement.contains("s") && movement.contains("e")) {      // the && is like saying "is the person typing types S and E" but its just in java  
-                startX++;
-                startY++;
-                Board();
-                Move();
-            } else if (movement.contains("s") && movement.contains("w")) {
-                startY++;
-                startY--;
-                Board();
-                Move();
-            } else if (movement.contains("n")) {
-                startX--;
-                Board();
-                Move();
-            } else if (movement.contains("s")) {
-                startX++;
-                Board();
-                Move();
-            } else if (movement.contains("e")) {
-                startY++;
-                Board();
-                Move();
-            } else if (movement.contains("w")) {
-                startY--;
-                Board();
-                Move();
-            } else {
-                System.out.println("Type only what I say or I will find and I will exterminate you");
-                Board();
-                Move();
+            }
+            if (choiceTwo.contains("n")) {
+                System.out.println("Bye");
+                System.exit(0);
             }
 
         }
+                //if (!());
+        //   }
+
+        System.out.println("To move the '@' symbol you must type 'N' to go up 'S' to go down 'E' to go right 'W' to go left or 'NE' to up and left, 'NW' to go up and right 'SW' to go down and left, 'SE' to go down and left");
+        Scanner compass = new Scanner(System.in);
+        movement = compass.nextLine().trim().toLowerCase(); // this mobvement thing is being told that it works for compass
+
+        if (movement.contains("n") && movement.contains("e")) {
+            startX--;
+            startY++;
+            Board();
+            Move();
+        } else if (movement.contains("n") && movement.contains("w")) {      // diagonal movement till line 56 - 75
+            startX--;
+            startY--;
+            Board();
+            Move();
+        } else if (movement.contains("s") && movement.contains("e")) {      // the && is like saying "is the person typing types S and E" but its just in java  
+            startX++;
+            startY++;
+            Board();
+            Move();
+        } else if (movement.contains("s") && movement.contains("w")) {
+            startY++;
+            startY--;
+            Board();
+            Move();
+        } else if (movement.contains("n")) {
+            startX--;
+            Board();
+            Move();
+        } else if (movement.contains("s")) {
+            startX++;
+            Board();
+            Move();
+        } else if (movement.contains("e")) {
+            startY++;
+            Board();
+            Move();
+        } else if (movement.contains("w")) {
+            startY--;
+            Board();
+            Move();
+        } else {
+            System.out.println("Type only what I say or I will find and I will exterminate you");
+            Board();
+            Move();
+        }
+
     }
+}
 //}
+
+
