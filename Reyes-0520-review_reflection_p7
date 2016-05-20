@@ -1,0 +1,22 @@
+
+    Given the class Ogre:
+    1. Provide an example class with class constructor
+Ogre{
+public height;
+public width;
+public color;
+public static Ogre(int a, int b, int ){
+	height = a;
+	width = b; 
+	color = c;
+}
+Ogre heigth = new Ogre(1,1,1);
+}
+
+
+
+    2. Give an example of instantiation of an Ogre object
+    3. Provide a setter for positioning
+    4. Provide an example of using an ogre's move method
+    5. Provide an example array of 3 ogres.
+

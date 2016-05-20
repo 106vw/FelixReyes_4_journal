@@ -2,15 +2,14 @@ package arrays;
 
 import java.util.Scanner;       // these are the imports for example I am trying to get beer and i ask for it but they diont have it they need to impoort it  
 import java.util.Random;
-//import java.util.Music;
 
 public class Arrays {
 
     public static boolean letsplay = true;
     static String movement;      // these things will allow me to type the movement of my @ symbol
     static Random randomNumber = new Random();
-    public static int startX = 7;
-    public static int startY = 7;
+    //public static int startX = 7;
+    //public static int startY = 7;
     public static int estartX = randomNumber.nextInt(8) + 1;          // the enemy cordinates
     public static int estartY = randomNumber.nextInt(8) + 1;
     public static int eOnestartX = randomNumber.nextInt(8) + 1;
@@ -22,20 +21,15 @@ public class Arrays {
     public static int winX = 1;
     public static int winY = 1;
     public static boolean lose;
-  //  public static Music gigap;
-    //startX = randomNumber.nextInt(8)+1;
-    //startY = randomNumber.nextInt(8)+1;
-    //estartX= randomNumber.nextInt(8)+1;
-    //estartY= randomNumber.nextInt(8)+1;
-    //eOnestartX= randomNumber.nextInt(8)+1;
-    //eOnestartY= randomNumber.nextInt(8)+1;
-    //movingEX= randomNumber.nextInt(9)+1;
-    //movingEY= randomNumber.nextInt(9)+1;
+    public static int eTwoStartX = randomNumber.nextInt(8) + 1;
+    public static int eTwoStartY = randomNumber.nextInt(8) + 1;
+    public static Player player; 
 
     public static void main(String[] args) {
         while (letsplay) {      //this while loop is what keeps the game going
             Board();        //this makes the static board part at the bottom run its like the checklist
             Move();
+            player = new Player(7,7);
         }
     }
 
@@ -51,11 +45,13 @@ public class Arrays {
         board[7][7] = '.';
         board[8][8] = '.';
         board[9][9] = '.';
-        board[startX][startY] = '@';
+        board[player.startX][player.startY] = '@';
         board[estartX][estartY] = '*';
         board[eOnestartX][eOnestartY] = '*';
         board[movingEX][movingEY] = '0';
         board[winX][winY] = '$';
+        board[eTwoStartX][eTwoStartY] = '*';
+        MovingEnemy();
 
         for (int i = 0; i <= board[0].length - 1; i++) {
             for (int j = 0; j <= board[1].length - 1; j++) {
@@ -78,43 +74,63 @@ public class Arrays {
 
     static void Move() {
 
-        if (startX == estartX && startY == estartY || startX == eOnestartX && startY == eOnestartY || startX == movingEX && startY == movingEY) {
+        if (player.startX == estartX && player.startY == estartY || player.startX == eOnestartX && player.startY == eOnestartY || player.startX == movingEX && player.startY == movingEY || player.startX == eTwoStartX && player.startY == eTwoStartY) {
             System.out.println("You lost, would you like to conitnue?");
             Scanner choice = new Scanner(System.in);
             choiceOne = choice.nextLine().trim().toLowerCase();
-           // lose = true;
-            //while (!lose) {       //the exclamation oint says not to keep going  
+
             if (choiceOne.contains("y")) {
 
-                startX = 7;
-                startY = 7;
-                estartX = randomNumber.nextInt(8) + 1;          // the enemy cordinates
+                player.startX = 7;
+                player.startY = 7;
+                estartX = randomNumber.nextInt(5) + 1;          // the enemy cordinates
                 estartY = randomNumber.nextInt(8) + 1;
-                eOnestartX = randomNumber.nextInt(8) + 1;
+                eOnestartX = randomNumber.nextInt(3) + 1;
                 eOnestartY = randomNumber.nextInt(8) + 1;
-                movingEX = randomNumber.nextInt(8) + 1;
+                movingEX = randomNumber.nextInt(7) + 1;
                 movingEY = randomNumber.nextInt(8) + 1;
+                eTwoStartX = randomNumber.nextInt(1) + 1;
+                eTwoStartY = randomNumber.nextInt(8) + 1;
                 Board();
             }
 
             if (choiceOne.contains("n")) {
-                System.out.println("Bye");
+                System.out.println(
+                        "/******   /**    **  /********\n"
+                        + "/*////**  //**  **   /**///// \n"
+                        + "/*   /**   //****    /**      \n"
+                        + "/******     //**     /******* \n"
+                        + "/*//// **    /**     /**////  \n"
+                        + "/*    /**    /**     /**      \n"
+                        + "/*******     /**     /********\n"
+                        + "///////      //      //////// ");
                 System.exit(0);
             }
         }
-        if (startX == winX && startY == winY) {
-            System.out.println("You have won, would you like to continue to the next level?");
+        if (player.startX == winX && player.startY == winY) {
+            System.out.println("+--- 3-d\n"
+                    + "\n"
+                    + " **    **                                              \n"
+                    + "//**  **                                               \n"
+                    + " //****    ******  **   ** ***     **  ******  ******* \n"
+                    + "  //**    **////**/**  /**//**  * /** **////**//**///**\n"
+                    + "   /**   /**   /**/**  /** /** ***/**/**   /** /**  /**\n"
+                    + "   /**   /**   /**/**  /** /****/****/**   /** /**  /**\n"
+                    + "   /**   //****** //****** ***/ ///**//******  ***  /**\n"
+                    + "   //     //////   ////// ///    ///  //////  ///   // ");
             Scanner choiceq = new Scanner(System.in);
             choiceTwo = choiceq.nextLine().trim().toLowerCase();
             if (choiceTwo.contains("y")) {
-                startX = 7;
-                startY = 7;
-                estartX = randomNumber.nextInt(8) + 1;          // the enemy cordinates
+                player.startX = 7;
+                player.startY = 7;
+                estartX = randomNumber.nextInt(5) + 1;          // the enemy cordinates
                 estartY = randomNumber.nextInt(8) + 1;
-                eOnestartX = randomNumber.nextInt(8) + 1;
+                eOnestartX = randomNumber.nextInt(3) + 1;
                 eOnestartY = randomNumber.nextInt(8) + 1;
-                movingEX = randomNumber.nextInt(8) + 1;
+                movingEX = randomNumber.nextInt(7) + 1;
                 movingEY = randomNumber.nextInt(8) + 1;
+                eTwoStartX = randomNumber.nextInt(1) + 1;
+                eTwoStartY = randomNumber.nextInt(8) + 1;
                 Board();
             }
             if (choiceTwo.contains("n")) {
@@ -123,47 +139,45 @@ public class Arrays {
             }
 
         }
-                //if (!());
-        //   }
 
         System.out.println("To move the '@' symbol you must type 'N' to go up 'S' to go down 'E' to go right 'W' to go left or 'NE' to up and left, 'NW' to go up and right 'SW' to go down and left, 'SE' to go down and left");
         Scanner compass = new Scanner(System.in);
         movement = compass.nextLine().trim().toLowerCase(); // this mobvement thing is being told that it works for compass
 
         if (movement.contains("n") && movement.contains("e")) {
-            startX--;
-            startY++;
+            player.startX--;
+            player.startY++;
             Board();
             Move();
         } else if (movement.contains("n") && movement.contains("w")) {      // diagonal movement till line 56 - 75
-            startX--;
-            startY--;
+            player.startX--;
+            player.startY--;
             Board();
             Move();
         } else if (movement.contains("s") && movement.contains("e")) {      // the && is like saying "is the person typing types S and E" but its just in java  
-            startX++;
-            startY++;
+            player.startX++;
+            player.startY++;
             Board();
             Move();
         } else if (movement.contains("s") && movement.contains("w")) {
-            startY++;
-            startY--;
+            player.startY++;
+            player.startY--;
             Board();
             Move();
         } else if (movement.contains("n")) {
-            startX--;
+            player.startX--;
             Board();
             Move();
         } else if (movement.contains("s")) {
-            startX++;
+            player.startX++;
             Board();
             Move();
         } else if (movement.contains("e")) {
-            startY++;
+            player.startY++;
             Board();
             Move();
         } else if (movement.contains("w")) {
-            startY--;
+            player.startY--;
             Board();
             Move();
         } else {
@@ -173,7 +187,25 @@ public class Arrays {
         }
 
     }
+
+    static void MovingEnemy() {
+        if (movingEX == estartX && movingEY == estartY || movingEX == eOnestartX && movingEY == eOnestartY || movingEX == eTwoStartX && movingEY == eTwoStartY) {
+
+            movingEX = randomNumber.nextInt(8) + 1;
+            movingEY = randomNumber.nextInt(8) + 1;
+            Board();
+        }
+        if (player.startX > movingEX) {      // this is the code where the enemy moves
+            movingEX++;
+        }
+        if (player.startX < movingEX) {
+            movingEX--;
+        }
+        if (player.startY > movingEY) {
+            movingEY++;
+        }
+        if (player.startY < movingEY) {
+            movingEY--;
+        }
+    }
 }
-//}
-
-
